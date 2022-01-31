@@ -11,3 +11,9 @@ body {
   color: white;
   font-family: 'Merriweather', serif;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
