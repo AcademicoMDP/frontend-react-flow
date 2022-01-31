@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select {
+  padding: 0.3rem 0.7rem;
+  border-radius: 5%;
+  font-size: large;
+  z-index: 9999;
+}
