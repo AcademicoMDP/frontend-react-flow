@@ -25,9 +25,7 @@ const ForecastWeatherCard: React.FC<Props> = ({daily, i}) => {
         <small>{capitalize(daily.weather[0].description)}</small>
       </div>
       <div className={style.temp}>
-        <span>
-          {daily.temp.min} {daily.temp.max}{" "}
-        </span>
+        <span className={style.min}>{daily.temp.min}°</span>/<span>{daily.temp.max}°</span>
       </div>
       <div>
         <Icon name={daily.weather[0].icon} size={2} />

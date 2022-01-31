@@ -17,6 +17,7 @@ export interface WeatherType {
   temp: TempType;
   feels_like: TempType;
   wind_speed: number;
+  humidity: number;
   weather: [
     {
       icon: string;

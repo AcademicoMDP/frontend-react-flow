@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
 
-import {Coordinates} from "../types";
+import {CoordinatesType} from "../types";
 
 const useGeolocation = () => {
   const [supported, setSupported] = useState(true);
-  const [location, setLocation] = useState<Coordinates | undefined>();
+  const [location, setLocation] = useState<CoordinatesType | undefined>();
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -19,7 +19,10 @@ const useGeolocation = () => {
 
         setLocation({latitude, longitude});
       },
-      (_) => setSupported(false),
+      (error) => {
+        console.log(error);
+        setSupported(false);
+      },
     );
   }, []);
 

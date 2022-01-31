@@ -1,0 +1,28 @@
+.container {
+  background-color: #1E1E52;
+  padding-left: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 3px #EB6E4B;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.day {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.temp {
+  display: flex;
+  gap: 1rem;
+}
+
+.min {
+  color: #c1c1c1
+}

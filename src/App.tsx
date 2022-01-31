@@ -50,11 +50,11 @@ function App() {
   }, [cityId, getWeatherByLocation, location, supported]);
 
   return (
-    <>
+    <div className="container">
       <CitySelector cityId={cityId} onCityChange={(e) => setCityId(e)} />
       {!currentWeather ? <div>Cargando...</div> : <CurrentWeatherCard current={currentWeather} />}
       {!forecast ? <div>Cargando...</div> : <ForecastWeatherList fore={forecast} />}
-    </>
+    </div>
   );
 }
 

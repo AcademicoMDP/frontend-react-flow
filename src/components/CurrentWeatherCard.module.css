@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .icon {
-  margin: -15%;
+  margin: -40px;
 }
 
 .current {
@@ -15,5 +16,21 @@
 }
 
 .degree {
-  color: #2D78C9;
+  color: #EB6E4B;
+}
+
+.otherInfo {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.otherInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otherInfo small {
+  color: #c1c1c1
 }

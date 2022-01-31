@@ -13,6 +13,7 @@ interface Props {
 const CurrentWeatherCard: React.FC<Props> = ({current}) => {
   return (
     <div className={style.container}>
+      <div className={style.current}>{capitalize(current.weather[0].description)}</div>
       <div className={style.icon}>
         <Icon name={current.weather[0].icon} size={4} />
       </div>
@@ -20,8 +21,20 @@ const CurrentWeatherCard: React.FC<Props> = ({current}) => {
         {current.temp}
         <span className={style.degree}>°</span>
       </div>
-      <div>{capitalize(current.weather[0].description)}</div>
-      {/* <div>ST: {current.feels_like}</div> */}
+      <div className={style.otherInfo}>
+        <div>
+          <small>Térmica</small>
+          <div>{current.feels_like}°</div>
+        </div>
+        <div>
+          <small>Viento</small>
+          <span>{(current.wind_speed * 3.6).toFixed(1)} km/h</span>
+        </div>
+        <div>
+          <small>Humedad</small>
+          <span>{current.humidity}%</span>
+        </div>
+      </div>
     </div>
   );
 };
