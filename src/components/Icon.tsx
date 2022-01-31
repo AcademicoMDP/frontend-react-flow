@@ -8,7 +8,7 @@ interface Props {
 const Icon: React.FC<Props> = ({name, size}) => {
   const x = size ? `@${size}x` : "";
 
-  return <img src={`https://openweathermap.org/img/wn/${name}${x}.png`} />;
+  return <img alt={name} src={`https://openweathermap.org/img/wn/${name}${x}.png`} />;
 };
 
 export default Icon;

@@ -1,7 +1,7 @@
 import React from "react";
 
 import {WeatherType} from "../types";
-import {capitalize} from "../utils";
+import {capitalize, roundOneDecimal} from "../utils";
 
 import style from "./ForecastWeatherCard.module.css";
 import Icon from "./Icon";
@@ -25,7 +25,8 @@ const ForecastWeatherCard: React.FC<Props> = ({daily, i}) => {
         <small>{capitalize(daily.weather[0].description)}</small>
       </div>
       <div className={style.temp}>
-        <span className={style.min}>{daily.temp.min}°</span>/<span>{daily.temp.max}°</span>
+        <span className={style.min}>{roundOneDecimal(daily.temp.min)}°</span>/
+        <span>{roundOneDecimal(daily.temp.max)}°</span>
       </div>
       <div>
         <Icon name={daily.weather[0].icon} size={2} />

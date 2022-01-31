@@ -1,7 +1,10 @@
 import React from "react";
+import {IoWaterOutline} from "react-icons/io5";
+import {FiWind} from "react-icons/fi";
+import {RiTempColdLine} from "react-icons/ri";
 
 import {WeatherType} from "../types";
-import {capitalize} from "../utils";
+import {capitalize, roundOneDecimal} from "../utils";
 
 import style from "./CurrentWeatherCard.module.css";
 import Icon from "./Icon";
@@ -18,21 +21,29 @@ const CurrentWeatherCard: React.FC<Props> = ({current}) => {
         <Icon name={current.weather[0].icon} size={4} />
       </div>
       <div className={style.current}>
-        {current.temp}
+        {roundOneDecimal(Number(current.temp))}
         <span className={style.degree}>°</span>
       </div>
       <div className={style.otherInfo}>
         <div>
           <small>Térmica</small>
-          <div>{current.feels_like}°</div>
+          <span>
+            <RiTempColdLine />
+            {roundOneDecimal(Number(current.feels_like))}°
+          </span>
         </div>
         <div>
           <small>Viento</small>
-          <span>{(current.wind_speed * 3.6).toFixed(1)} km/h</span>
+          <span>
+            <FiWind />
+            {(current.wind_speed * 3.6).toFixed(1)} km/h
+          </span>
         </div>
         <div>
           <small>Humedad</small>
-          <span>{current.humidity}%</span>
+          <span>
+            <IoWaterOutline /> {current.humidity}%
+          </span>
         </div>
       </div>
     </div>

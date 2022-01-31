@@ -13,6 +13,7 @@
 .current {
   font-size: 4rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .degree {
@@ -33,4 +34,10 @@
 
 .otherInfo small {
   color: #c1c1c1
+}
+
+.otherInfo span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }

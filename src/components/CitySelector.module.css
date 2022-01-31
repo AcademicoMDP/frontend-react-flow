@@ -9,4 +9,16 @@ select {
   border-radius: 5%;
   font-size: large;
   z-index: 9999;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+select option {
+  color: black
+}
+
+select:focus {
+  outline: none;
 }

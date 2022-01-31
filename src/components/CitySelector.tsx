@@ -1,4 +1,5 @@
 import React from "react";
+import {GoLocation} from "react-icons/go";
 
 import {CIUDADES} from "../api";
 
@@ -12,6 +13,7 @@ interface Props {
 const CitySelector: React.FC<Props> = ({cityId, onCityChange}) => {
   return (
     <div className={style.container}>
+      {cityId === -1 && <GoLocation size={28} />}
       <select
         className={style.select}
         name="city"

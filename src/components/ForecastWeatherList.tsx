@@ -1,4 +1,5 @@
 import React from "react";
+import {FaRegCalendarAlt} from "react-icons/fa";
 
 import {WeatherType} from "../types";
 
@@ -12,7 +13,9 @@ interface Props {
 const ForecastWeatherList: React.FC<Props> = ({fore}) => {
   return (
     <>
-      <h3 className={style.h3}>Pronóstico para los próximos 5 días</h3>
+      <h3 className={style.h3}>
+        <FaRegCalendarAlt /> Pronóstico para los próximos 5 días
+      </h3>
       <div className={style.cardcontainer}>
         {fore.map((daily: WeatherType, index: number) => (
           <ForecastWeatherCard key={index} daily={daily} i={index} />

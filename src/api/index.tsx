@@ -1,11 +1,11 @@
 import demo from "../mock";
-import {City} from "../types";
+import {CityType} from "../types";
 
 const API_KEY = import.meta.env.VITE_OPENWEATHER_KEY;
 
-const API_URL = `http://api.openweathermap.org/data/2.5/onecall?units=metric&lang=es&exclude=minutely,hourly,alerts&appid=${API_KEY}`;
+const API_URL = `https://api.openweathermap.org/data/2.5/onecall?units=metric&lang=es&exclude=minutely,hourly,alerts&appid=${API_KEY}`;
 
-const CIUDADES: City[] = [
+const CIUDADES: CityType[] = [
   {id: 3433955, name: "CABA", latitude: -34.599998, longitude: -58.450001},
   {id: 3860259, name: "Córdoba", latitude: -31.4135, longitude: -64.181053},
   {id: 3430863, name: "Mar del Plata", latitude: -38.002281, longitude: -57.557541},

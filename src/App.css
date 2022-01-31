@@ -14,5 +14,6 @@ body {
 }
 
 .container {
-  padding: 3rem;
+  padding: 2rem;
+  padding-bottom: 5rem;
 }
