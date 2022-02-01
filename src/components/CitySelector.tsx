@@ -22,7 +22,9 @@ const CitySelector: React.FC<Props> = ({cityId, onCityChange}) => {
       >
         <option value="-1">Mi Ubicación</option>
         {CIUDADES.map((city) => (
-          <option key={city.id} label={city.name} value={city.id} />
+          <option key={city.id} value={city.id}>
+            {city.name}
+          </option>
         ))}
       </select>
     </div>
