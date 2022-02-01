@@ -14,3 +14,7 @@ Ejecutar en consola
 npm install
 npm run dev
 ```
+
+## Decisiones tomadas
+
+Decidí preguntar por el permiso de localización al abrir el sitio intuyendo que el usuario probablemente quiere ver el clima en su ubicación actual. En caso de rechazar la obtención de la localización, se muestra una ubicación por defecto, permitiéndole luego cambiar a cualquiera de las predefinidas.
