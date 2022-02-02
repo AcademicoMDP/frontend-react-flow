@@ -10,7 +10,7 @@ const CIUDADES: CityType[] = [
   {id: 3860259, name: "Córdoba", latitude: -31.4135, longitude: -64.181053},
   {id: 3430863, name: "Mar del Plata", latitude: -38.002281, longitude: -57.557541},
   {id: 3429971, name: "Pinamar", latitude: -37.107941, longitude: -56.861401},
-  {id: 3835869, name: "Santiago del Estero", latitude: -27.795111, longitude: 64.26149},
+  {id: 3835869, name: "Santiago del Estero", latitude: -27.795111, longitude: -64.26149},
 ];
 
 const api = {
